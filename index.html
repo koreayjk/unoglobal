@@ -125,6 +125,11 @@ section{padding:100px 0}
 .client-card{padding:30px 18px;background:#fff;border:1px solid var(--line);border-radius:10px;text-align:center;font-weight:600;color:var(--navy);transition:.3s}
 .client-card:hover{border-color:var(--accent);color:var(--blue);transform:translateY(-3px)}
 .client-card .ci{font-size:13px;color:var(--gray);font-weight:500;margin-top:4px}
+.client-logos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.logo-card{height:110px;background:#fff;border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:22px;transition:.3s}
+.logo-card img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(100%);opacity:.62;transition:.3s}
+.logo-card:hover{border-color:var(--accent);box-shadow:0 12px 30px rgba(19,40,63,.1);transform:translateY(-3px)}
+.logo-card:hover img{filter:none;opacity:1}
 .feat-list{list-style:none;margin-top:18px}
 .feat-list li{position:relative;padding:10px 0 10px 30px;color:var(--gray);font-size:15.5px;border-bottom:1px dashed var(--line)}
 .feat-list li:last-child{border:none}
@@ -282,6 +287,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
   .svc-grid{grid-template-columns:1fr}
   .stats-grid,.net-grid{grid-template-columns:1fr 1fr;gap:30px 20px}
   .vals,.consult-grid,.steps,.region-grid{grid-template-columns:1fr 1fr}
+  .client-logos{grid-template-columns:repeat(3,1fr)}
   .vals.vals4{grid-template-columns:1fr 1fr}
   .sas{grid-template-columns:1fr}
   .proc{grid-template-columns:1fr 1fr}
@@ -292,6 +298,8 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
 }
 @media(max-width:560px){
   .vals,.consult-grid,.steps,.net-grid,.region-grid,.clients,.stats-grid{grid-template-columns:1fr}
+  .client-logos{grid-template-columns:1fr 1fr;gap:12px}
+  .logo-card{height:90px;padding:16px}
   .tab-card-grid{grid-template-columns:1fr}
   .hero h1{font-size:28px}
   .contact-table th:nth-child(3),.contact-table td:nth-child(3){display:none}
@@ -579,6 +587,24 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
         <div class="client-card reveal"><span data-lang="ko">식품·소비재</span><span data-lang="en">Food &amp; Consumer</span><div class="ci"><span data-lang="ko">정온·일반 화물</span><span data-lang="en">Temp &amp; dry cargo</span></div></div>
         <div class="client-card reveal"><span data-lang="ko">자동차·부품</span><span data-lang="en">Automotive</span><div class="ci"><span data-lang="ko">부품·완성차 운송</span><span data-lang="en">Parts &amp; vehicles</span></div></div>
         <div class="client-card reveal"><span data-lang="ko">무역상사</span><span data-lang="en">Trading Firms</span><div class="ci"><span data-lang="ko">종합 수출입 대행</span><span data-lang="en">Full trade support</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Major Clients</div><h2 class="sec-title"><span data-lang="ko">주요 거래처</span><span data-lang="en">Major Clients</span></h2>
+      <p class="sec-desc"><span data-lang="ko">국내외 화학·소재·자동차·종합상사 등 다양한 분야의 기업과 함께합니다.</span><span data-lang="en">We work with leading companies in chemicals, materials, automotive, and trading.</span></p></div>
+      <div class="client-logos">
+        <div class="logo-card reveal"><img src="images/clients/lotte-chemical.png" alt="LOTTE Chemical"></div>
+        <div class="logo-card reveal"><img src="images/clients/kumho-mitsui.png" alt="금호미쓰이화학"></div>
+        <div class="logo-card reveal"><img src="images/clients/kumho-pnb.png" alt="금호피앤비화학"></div>
+        <div class="logo-card reveal"><img src="images/clients/samsung-polymer.png" alt="삼성포리머"></div>
+        <div class="logo-card reveal"><img src="images/clients/hyosung.png" alt="HS HYOSUNG Advanced Materials"></div>
+        <div class="logo-card reveal"><img src="images/clients/toray.png" alt="TORAY 도레이첨단소재"></div>
+        <div class="logo-card reveal"><img src="images/clients/samnam.png" alt="SAMNAM Petrochemical"></div>
+        <div class="logo-card reveal"><img src="images/clients/mitsui.png" alt="MITSUI &amp; CO."></div>
+        <div class="logo-card reveal"><img src="images/clients/hyundai.png" alt="HYUNDAI"></div>
+        <div class="logo-card reveal"><img src="images/clients/kpx.png" alt="KPX Chemical"></div>
       </div>
     </div>
   </section>
