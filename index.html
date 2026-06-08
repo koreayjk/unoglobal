@@ -264,6 +264,37 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
 .proc-step{padding:22px 18px;background:#fff;border:1px solid var(--line);border-radius:10px;border-top:3px solid var(--blue)}
 .proc-step .pn{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1px;margin-bottom:8px}
 .proc-step h4{font-size:15px;color:var(--navy);font-weight:700}
+/* CS page enhancements */
+.flow-diagram{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 24px;margin:30px 0 10px;box-shadow:0 4px 18px rgba(19,40,63,.05)}
+.flow-diagram svg{width:100%;height:auto;display:block}
+.flow-caption{text-align:center;font-size:13.5px;color:var(--gray);margin-top:18px;letter-spacing:.3px}
+.svc-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.svc-detail{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:.3s;position:relative;overflow:hidden}
+.svc-detail::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--accent));opacity:0;transition:.3s}
+.svc-detail:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(19,40,63,.12);border-color:transparent}
+.svc-detail:hover::before{opacity:1}
+.svc-detail .sd-ico{width:46px;height:46px;border-radius:10px;background:var(--light);display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:18px;transition:.3s}
+.svc-detail:hover .sd-ico{background:var(--navy);color:#fff}
+.svc-detail .sd-ico svg{width:22px;height:22px}
+.svc-detail h4{font-size:17px;color:var(--navy);font-weight:800;margin-bottom:10px}
+.svc-detail p{font-size:14px;color:var(--gray);line-height:1.65}
+.partner-box{margin-top:36px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;background:linear-gradient(120deg,var(--navy-deep),var(--navy));border-radius:14px;overflow:hidden;color:#fff}
+.partner-box .pb-text{padding:44px 40px}
+.partner-box .pb-eyebrow{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:800;margin-bottom:14px}
+.partner-box h3{font-size:26px;font-weight:800;margin-bottom:14px;line-height:1.3}
+.partner-box p{font-size:15px;color:rgba(255,255,255,.82);line-height:1.7}
+.partner-box .pb-visual{height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:30px;background:rgba(255,255,255,.04)}
+.partner-box .pb-visual svg{max-width:100%;height:auto}
+@media(max-width:980px){
+  .svc-detail-grid{grid-template-columns:1fr 1fr}
+  .partner-box{grid-template-columns:1fr}
+  .partner-box .pb-text{padding:34px 28px}
+  .partner-box .pb-visual{min-height:220px}
+}
+@media(max-width:560px){
+  .svc-detail-grid{grid-template-columns:1fr}
+  .flow-diagram{padding:22px 14px}
+}
 @media(max-width:980px){
   .nav{position:fixed;top:0;right:-100%;width:80%;max-width:340px;height:100vh;background:var(--navy);flex-direction:column;justify-content:flex-start;padding:90px 24px 40px;gap:4px;transition:.4s;box-shadow:-8px 0 30px rgba(0,0,0,.3);overflow-y:auto;align-items:stretch}
   .nav.open{right:0}
@@ -1003,6 +1034,180 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
         <div class="cc reveal" onclick="goPage('cs-warehouse')"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M7 21v-7h10v7"/><path d="M7 14h10"/></svg></div><h4><span data-lang="ko">창고물류 상담</span><span data-lang="en">Warehouse Logistics</span></h4><p><span data-lang="ko">보관·재고 관리 등 창고 물류를 컨설팅합니다.</span><span data-lang="en">Consulting on storage and inventory.</span></p></div>
         <div class="cc reveal" onclick="goPage('cs-transport')"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V6a1 1 0 0 1 1-1h10v11"/><path d="M13 9h4l3 3v4"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/><path d="M9 17.5h6M20 16h1"/></svg></div><h4><span data-lang="ko">운송물류 상담</span><span data-lang="en">Transport Logistics</span></h4><p><span data-lang="ko">내륙 운송 및 복합 운송 솔루션을 제공합니다.</span><span data-lang="en">Inland and multimodal solutions.</span></p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Win-Win partnership concept -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="partner-box reveal">
+        <div class="pb-text">
+          <div class="pb-eyebrow">Win-Win Partnership</div>
+          <h3><span data-lang="ko">고객의 화물을 내 일처럼,<br>유노글로벌은 사업 동반자입니다</span><span data-lang="en">Your cargo, treated as our own.<br>UNO Global is your business partner.</span></h3>
+          <p><span data-lang="ko">단순한 운송 대행이 아닌, 수출입 전반의 의사결정을 함께 설계하는 컨설팅 파트너를 지향합니다. 화물의 종류, 일정, 예산, 리스크를 종합적으로 분석해 가장 합리적인 물류 솔루션을 제안합니다.</span><span data-lang="en">More than a freight forwarder, we are a consulting partner that designs your import-export decisions together with you. We analyze cargo type, schedule, budget, and risk to propose the most rational logistics solution.</span></p>
+        </div>
+        <div class="pb-visual">
+          <svg viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UNO Global Partnership">
+            <defs>
+              <radialGradient id="hubGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c8862b"/><stop offset="100%" stop-color="#9a651f"/></radialGradient>
+            </defs>
+            <!-- Connecting orbits -->
+            <circle cx="180" cy="140" r="100" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1" stroke-dasharray="3,4"/>
+            <circle cx="180" cy="140" r="60" fill="none" stroke="rgba(200,134,43,.35)" stroke-width="1"/>
+            <!-- Connecting lines from hub to satellites -->
+            <line x1="180" y1="140" x2="80" y2="80" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <line x1="180" y1="140" x2="280" y2="80" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <line x1="180" y1="140" x2="80" y2="200" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <line x1="180" y1="140" x2="280" y2="200" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+            <!-- 4 satellite nodes: Export / Import / Warehouse / Transport -->
+            <g transform="translate(80,80)">
+              <circle r="26" fill="#13283f" stroke="#c8862b" stroke-width="1.5"/>
+              <g transform="translate(-10,-10)" fill="none" stroke="#c8862b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 1v15"/><path d="m4 7 6-6 6 6"/><path d="M2 19v3h16v-3"/>
+              </g>
+              <text y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="'Noto Sans KR',sans-serif">EXPORT</text>
+            </g>
+            <g transform="translate(280,80)">
+              <circle r="26" fill="#13283f" stroke="#c8862b" stroke-width="1.5"/>
+              <g transform="translate(-10,-10)" fill="none" stroke="#c8862b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 16V1"/><path d="m4 10 6 6 6-6"/><path d="M2 19v3h16v-3"/>
+              </g>
+              <text y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="'Noto Sans KR',sans-serif">IMPORT</text>
+            </g>
+            <g transform="translate(80,200)">
+              <circle r="26" fill="#13283f" stroke="#c8862b" stroke-width="1.5"/>
+              <g transform="translate(-10,-10)" fill="none" stroke="#c8862b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 20V8l9-5 9 5v12"/><path d="M1 20h18"/><path d="M5 20v-7h10v7"/><path d="M5 13h10"/>
+              </g>
+              <text y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="'Noto Sans KR',sans-serif">WAREHOUSE</text>
+            </g>
+            <g transform="translate(280,200)">
+              <circle r="26" fill="#13283f" stroke="#c8862b" stroke-width="1.5"/>
+              <g transform="translate(-10,-10)" fill="none" stroke="#c8862b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M0 14V4a1 1 0 0 1 1-1h11v12"/><path d="M12 7h4l3 3v5"/><circle cx="5" cy="17" r="1.6"/><circle cx="15" cy="17" r="1.6"/>
+              </g>
+              <text y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="'Noto Sans KR',sans-serif">TRANSPORT</text>
+            </g>
+            <!-- Center UNO hub -->
+            <circle cx="180" cy="140" r="42" fill="url(#hubGrad)" stroke="#fff" stroke-width="2"/>
+            <text x="180" y="135" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="'Inter',sans-serif" letter-spacing="1">UNO</text>
+            <text x="180" y="153" text-anchor="middle" font-size="9" font-weight="600" fill="rgba(255,255,255,.85)" font-family="'Inter',sans-serif" letter-spacing="1.5">GLOBAL</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-step consultation process -->
+  <section class="pg-section">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Consultation Process</div><h2 class="sec-title"><span data-lang="ko">5단계 컨설팅 프로세스</span><span data-lang="en">5-Step Consultation Process</span></h2>
+      <p class="sec-desc"><span data-lang="ko">상담 접수부터 사후 관리까지, 체계적인 5단계로 책임지고 진행합니다.</span><span data-lang="en">From initial inquiry to post-shipment support, we follow a systematic 5-step process.</span></p></div>
+      <div class="flow-diagram reveal">
+        <svg viewBox="0 0 1100 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Consultation 5-Step Process">
+          <defs>
+            <linearGradient id="cstep" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2c6e9b"/><stop offset="100%" stop-color="#13283f"/></linearGradient>
+            <marker id="arrowG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8862b"/></marker>
+          </defs>
+          <!-- Connecting line with arrows -->
+          <line x1="120" y1="80" x2="980" y2="80" stroke="#c8862b" stroke-width="2" stroke-dasharray="5,5" opacity="0.55" marker-end="url(#arrowG)"/>
+          <g font-family="'Noto Sans KR',sans-serif">
+            <!-- Step 1 -->
+            <g transform="translate(120,80)">
+              <circle r="48" fill="url(#cstep)" stroke="#fff" stroke-width="3"/>
+              <text fill="#c8862b" font-size="10" font-weight="800" letter-spacing="1.5" text-anchor="middle" y="-10">STEP 01</text>
+              <g transform="translate(-12,0)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12c0-4 3-7 9-7s9 3 9 7-3 7-9 7c-1 0-2-.1-3-.3L3 21l1.4-4.4c-.9-1.3-1.4-2.8-1.4-4.6z"/>
+              </g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="76">상담 접수</text>
+              <text fill="#5a6b7b" font-size="11.5" text-anchor="middle" y="93">화물 정보 청취</text>
+            </g>
+            <!-- Step 2 -->
+            <g transform="translate(335,80)">
+              <circle r="48" fill="url(#cstep)" stroke="#fff" stroke-width="3"/>
+              <text fill="#c8862b" font-size="10" font-weight="800" letter-spacing="1.5" text-anchor="middle" y="-10">STEP 02</text>
+              <g transform="translate(-12,-12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 6-6"/>
+              </g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="76">분석·진단</text>
+              <text fill="#5a6b7b" font-size="11.5" text-anchor="middle" y="93">물류비·동선 분석</text>
+            </g>
+            <!-- Step 3 (highlighted accent) -->
+            <g transform="translate(550,80)">
+              <circle r="52" fill="#c8862b" stroke="#fff" stroke-width="3"/>
+              <text fill="#fff" font-size="10" font-weight="800" letter-spacing="1.5" text-anchor="middle" y="-12">STEP 03</text>
+              <g transform="translate(-12,-10)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M10 12h6M10 16h6M9 8h1"/>
+              </g>
+              <text fill="#13283f" font-weight="800" font-size="14" text-anchor="middle" y="80">솔루션 제안</text>
+              <text fill="#5a6b7b" font-size="11.5" text-anchor="middle" y="97">최적 운임·노선</text>
+            </g>
+            <!-- Step 4 -->
+            <g transform="translate(765,80)">
+              <circle r="48" fill="url(#cstep)" stroke="#fff" stroke-width="3"/>
+              <text fill="#c8862b" font-size="10" font-weight="800" letter-spacing="1.5" text-anchor="middle" y="-10">STEP 04</text>
+              <g transform="translate(-12,-12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8L4.2 7a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>
+              </g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="76">계약·실행</text>
+              <text fill="#5a6b7b" font-size="11.5" text-anchor="middle" y="93">부킹·통관·운송</text>
+            </g>
+            <!-- Step 5 -->
+            <g transform="translate(980,80)">
+              <circle r="48" fill="url(#cstep)" stroke="#fff" stroke-width="3"/>
+              <text fill="#c8862b" font-size="10" font-weight="800" letter-spacing="1.5" text-anchor="middle" y="-10">STEP 05</text>
+              <g transform="translate(-12,-12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12A10 10 0 1 1 12 2"/><polyline points="22 4 12 14 9 11"/>
+              </g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="76">사후 관리</text>
+              <text fill="#5a6b7b" font-size="11.5" text-anchor="middle" y="93">정산·피드백</text>
+            </g>
+          </g>
+        </svg>
+        <div class="flow-caption"><span data-lang="ko">※ 각 단계는 고객 상황에 맞춰 유연하게 조정됩니다.</span><span data-lang="en">※ Each step is flexibly adapted to your situation.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why UNO Global -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Why UNO Global</div><h2 class="sec-title"><span data-lang="ko">유노글로벌을 선택해야 하는 이유</span><span data-lang="en">Why Choose UNO Global</span></h2></div>
+      <div class="vals vals4">
+        <div class="val-card reveal"><div class="vnum">REASON 01</div><h4><span data-lang="ko">전문성</span><span data-lang="en">Expertise</span></h4><p><span data-lang="ko">국제물류 전 분야에서 풍부한 실무 경험을 갖춘 담당자가 직접 컨설팅합니다.</span><span data-lang="en">Our seasoned specialists with deep experience consult directly across all areas of international logistics.</span></p>
+          <ul class="vitems">
+            <li><span data-lang="ko">해상·항공 운송 노하우</span><span data-lang="en">Sea &amp; Air know-how</span></li>
+            <li><span data-lang="ko">통관 실무 전문</span><span data-lang="en">Customs expertise</span></li>
+            <li><span data-lang="ko">프로젝트 화물 경험</span><span data-lang="en">Project cargo experience</span></li>
+          </ul>
+        </div>
+        <div class="val-card reveal"><div class="vnum">REASON 02</div><h4><span data-lang="ko">신속한 대응</span><span data-lang="en">Quick Response</span></h4><p><span data-lang="ko">문의 즉시 응답, 24/7 화물 모니터링으로 변수에 빠르게 대응합니다.</span><span data-lang="en">Immediate response on inquiry and 24/7 cargo monitoring — we react quickly to unexpected issues.</span></p>
+          <ul class="vitems">
+            <li><span data-lang="ko">실시간 화물 추적</span><span data-lang="en">Real-time tracking</span></li>
+            <li><span data-lang="ko">24시간 비상 연락</span><span data-lang="en">24h emergency line</span></li>
+            <li><span data-lang="ko">긴급 변경 대응</span><span data-lang="en">Urgent change handling</span></li>
+          </ul>
+        </div>
+        <div class="val-card reveal"><div class="vnum">REASON 03</div><h4><span data-lang="ko">투명한 운영</span><span data-lang="en">Transparency</span></h4><p><span data-lang="ko">운임 구조부터 진행 단계까지 모든 정보를 명확하게 공유합니다.</span><span data-lang="en">From rate breakdowns to status updates, we share all information clearly.</span></p>
+          <ul class="vitems">
+            <li><span data-lang="ko">상세 운임 내역서</span><span data-lang="en">Itemized rate sheet</span></li>
+            <li><span data-lang="ko">진행 단계별 보고</span><span data-lang="en">Stage-by-stage updates</span></li>
+            <li><span data-lang="ko">정산 명세 제공</span><span data-lang="en">Settlement details</span></li>
+          </ul>
+        </div>
+        <div class="val-card reveal"><div class="vnum">REASON 04</div><h4><span data-lang="ko">글로벌 네트워크</span><span data-lang="en">Global Network</span></h4><p><span data-lang="ko">아시아·미주·유럽 주요 거점의 검증된 파트너와 함께 안정적으로 운송합니다.</span><span data-lang="en">Reliable transport with vetted partners at key hubs in Asia, the Americas, and Europe.</span></p>
+          <ul class="vitems">
+            <li><span data-lang="ko">아시아 직항 노선</span><span data-lang="en">Direct Asia routes</span></li>
+            <li><span data-lang="ko">미주·유럽 거점망</span><span data-lang="en">Americas &amp; Europe hubs</span></li>
+            <li><span data-lang="ko">현지 통관 파트너</span><span data-lang="en">Local customs partners</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pg-section">
+    <div class="container">
       <div class="contact-cta reveal">
         <h3><span data-lang="ko">바로 상담 문의하기</span><span data-lang="en">Contact Us Directly</span></h3>
         <p><span data-lang="ko">전화 또는 이메일로 편하게 문의해 주세요. 전문 담당자가 신속하게 안내해 드립니다.</span><span data-lang="en">Reach us by phone or email — our specialists will respond promptly.</span></p>
@@ -1053,6 +1258,85 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
       <div class="step reveal"><div class="snum">4</div><h4><span data-lang="ko">서류·완료</span><span data-lang="en">Docs &amp; Done</span></h4><p><span data-lang="ko">운송 서류 발급 및 추적</span><span data-lang="en">Document issuance &amp; tracking</span></p></div>
     </div>
   </div></section>
+
+  <!-- Export journey diagram -->
+  <section class="pg-section">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Export Journey</div><h2 class="sec-title"><span data-lang="ko">수출 화물의 여정</span><span data-lang="en">The Export Journey</span></h2>
+      <p class="sec-desc"><span data-lang="ko">공장 출하부터 본선 적재까지, 화물의 모든 이동을 유노글로벌이 책임집니다.</span><span data-lang="en">From factory dispatch to vessel loading — UNO Global handles every movement.</span></p></div>
+      <div class="flow-diagram reveal">
+        <svg viewBox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Export Journey">
+          <defs>
+            <linearGradient id="exstep" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2c6e9b"/><stop offset="100%" stop-color="#13283f"/></linearGradient>
+            <marker id="arrowEx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8862b"/></marker>
+          </defs>
+          <line x1="100" y1="90" x2="1000" y2="90" stroke="#c8862b" stroke-width="2" stroke-dasharray="5,5" opacity="0.55" marker-end="url(#arrowEx)"/>
+          <g font-family="'Noto Sans KR',sans-serif">
+            <!-- 1. Factory dispatch -->
+            <g transform="translate(100,90)">
+              <circle r="44" fill="url(#exstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22V8l8-4 8 4v14"/><path d="M2 22h18"/><path d="M7 22v-8h6v8"/><path d="M14 14h5"/><path d="M14 18h5"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">공장 출하</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Dispatch</text>
+            </g>
+            <!-- 2. Inland transport -->
+            <g transform="translate(280,90)">
+              <circle r="44" fill="url(#exstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-13,-10)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14V4a1 1 0 0 1 1-1h11v12"/><path d="M12 7h4l3 3v5"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 18h8"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">국내 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Trucking</text>
+            </g>
+            <!-- 3. CY/CFS in -->
+            <g transform="translate(460,90)">
+              <circle r="44" fill="url(#exstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="6"/><rect x="2" y="9" width="20" height="6"/><rect x="2" y="15" width="20" height="6"/><path d="M6 6h0M6 12h0M6 18h0"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">CY·CFS 반입</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Container Yard</text>
+            </g>
+            <!-- 4. Customs (highlight) -->
+            <g transform="translate(640,90)">
+              <circle r="48" fill="#c8862b" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></g>
+              <text fill="#13283f" font-weight="800" font-size="13" text-anchor="middle" y="72">수출 통관</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="88">Customs</text>
+            </g>
+            <!-- 5. Loading -->
+            <g transform="translate(820,90)">
+              <circle r="44" fill="url(#exstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8h14v13"/><path d="M9 21v-7h6v7"/><path d="M3 8 12 3l9 5"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">본선 적재</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Loading</text>
+            </g>
+            <!-- 6. Vessel departure -->
+            <g transform="translate(1000,90)">
+              <circle r="44" fill="url(#exstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-13,-10)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17.5C3.5 16 4.7 15 7 15h12c2.3 0 3.5 1 5 2.5"/><path d="M5 13h14l-2-6H7z"/><path d="M12 7V3h0"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">출항</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Departure</text>
+            </g>
+          </g>
+        </svg>
+        <div class="flow-caption"><span data-lang="ko">FCL · LCL · 항공 화물 모두 동일한 프로세스로 진행됩니다.</span><span data-lang="en">FCL, LCL, and air cargo all follow this same process.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export service details -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Export Services</div><h2 class="sec-title"><span data-lang="ko">수출 물류 상세 서비스</span><span data-lang="en">Detailed Export Services</span></h2>
+      <p class="sec-desc"><span data-lang="ko">화물 부킹부터 서류 발급까지, 수출 전 과정을 일괄 대행합니다.</span><span data-lang="en">From booking to documentation — we handle every stage of your export.</span></p></div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></div><h4><span data-lang="ko">선박·항공 부킹</span><span data-lang="en">Sea &amp; Air Booking</span></h4><p><span data-lang="ko">FCL·LCL·항공 화물의 스페이스 예약 및 스케줄 관리. 글로벌 선사·항공사와 직접 연계해 안정적인 스페이스를 확보합니다.</span><span data-lang="en">FCL/LCL and air cargo space reservation and schedule management — direct carrier and airline partnerships for reliable space.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M10 12h4"/><path d="M10 16h4"/></svg></div><h4><span data-lang="ko">수출 통관 대행</span><span data-lang="en">Export Customs</span></h4><p><span data-lang="ko">관세사와 협업해 수출 신고, HS 코드 분류, 원산지 증명서 발급 등 통관 전반을 신속하게 처리합니다.</span><span data-lang="en">In partnership with licensed customs brokers — fast export filing, HS classification, and certificate of origin issuance.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V5a2 2 0 0 1 2-2h4"/><path d="M21 9V5a2 2 0 0 0-2-2h-4"/><path d="M3 15v4a2 2 0 0 0 2 2h4"/><path d="M21 15v4a2 2 0 0 1-2 2h-4"/><rect x="7" y="8" width="10" height="8" rx="1"/></svg></div><h4><span data-lang="ko">보세운송·창고</span><span data-lang="en">Bonded Transport</span></h4><p><span data-lang="ko">자체 노하우와 보세 운송 라이선스 파트너십을 통해 안전한 보세 구간 운송과 보관을 제공합니다.</span><span data-lang="en">Bonded-area transport and storage via in-house know-how and licensed partner network.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.91 11.12a1 1 0 0 0 0-1.41l-7.5-7.5a2 2 0 0 0-2.83 0L3.5 9.29a1 1 0 0 0 0 1.41l8.79 8.8a2 2 0 0 0 2.83 0z"/><circle cx="11.5" cy="11.5" r="1.5"/></svg></div><h4><span data-lang="ko">적하보험 가입</span><span data-lang="en">Cargo Insurance</span></h4><p><span data-lang="ko">화물 가액과 운송 리스크에 맞춘 적하보험 가입을 안내합니다. 분실·파손 시 신속한 보상 절차를 지원합니다.</span><span data-lang="en">Cargo insurance suited to value and route risk, with fast claim support in case of loss or damage.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div><h4><span data-lang="ko">B/L·서류 발급</span><span data-lang="en">B/L &amp; Documents</span></h4><p><span data-lang="ko">선하증권(B/L), 항공운송장(AWB), 인보이스, 패킹리스트 등 수출 필수 서류를 정확하게 발급합니다.</span><span data-lang="en">Accurate issuance of B/L, AWB, commercial invoice, and packing list — every export document required.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h4><span data-lang="ko">실시간 화물 추적</span><span data-lang="en">Real-Time Tracking</span></h4><p><span data-lang="ko">출항 후 도착까지 화물 위치를 실시간 모니터링하고, 진행 상황을 이메일·메신저로 즉시 공유합니다.</span><span data-lang="en">Real-time cargo location monitoring from departure to arrival, with immediate updates via email and messenger.</span></p></div>
+      </div>
+    </div>
+  </section>
+
     <section class="cta">
     <div class="container">
       <h2><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
@@ -1094,6 +1378,85 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
       <div class="step reveal"><div class="snum">4</div><h4><span data-lang="ko">내륙 배송</span><span data-lang="en">Delivery</span></h4><p><span data-lang="ko">국내 목적지까지 배송</span><span data-lang="en">Deliver to destination</span></p></div>
     </div>
   </div></section>
+
+  <!-- Import journey diagram -->
+  <section class="pg-section">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Import Journey</div><h2 class="sec-title"><span data-lang="ko">수입 화물의 여정</span><span data-lang="en">The Import Journey</span></h2>
+      <p class="sec-desc"><span data-lang="ko">해외 공급처에서 국내 도착지까지, 화물의 전 구간을 일관되게 관리합니다.</span><span data-lang="en">From overseas supplier to your domestic destination — every segment, one team.</span></p></div>
+      <div class="flow-diagram reveal">
+        <svg viewBox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Import Journey">
+          <defs>
+            <linearGradient id="imstep" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2c6e9b"/><stop offset="100%" stop-color="#13283f"/></linearGradient>
+            <marker id="arrowIm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8862b"/></marker>
+          </defs>
+          <line x1="100" y1="90" x2="1000" y2="90" stroke="#c8862b" stroke-width="2" stroke-dasharray="5,5" opacity="0.55" marker-end="url(#arrowIm)"/>
+          <g font-family="'Noto Sans KR',sans-serif">
+            <!-- 1. Overseas supplier -->
+            <g transform="translate(100,90)">
+              <circle r="44" fill="url(#imstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">해외 공급처</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Origin</text>
+            </g>
+            <!-- 2. International transport -->
+            <g transform="translate(280,90)">
+              <circle r="44" fill="url(#imstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-13,-10)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17.5C3.5 16 4.7 15 7 15h12c2.3 0 3.5 1 5 2.5"/><path d="M5 13h14l-2-6H7z"/><path d="M12 7V3"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">국제 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Sea / Air</text>
+            </g>
+            <!-- 3. Arrival port -->
+            <g transform="translate(460,90)">
+              <circle r="44" fill="url(#imstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8h14v13"/><path d="m3 8 9-5 9 5"/><path d="M10 21v-7h4v7"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">입항·하역</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Port Arrival</text>
+            </g>
+            <!-- 4. Import customs (highlight) -->
+            <g transform="translate(640,90)">
+              <circle r="48" fill="#c8862b" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></g>
+              <text fill="#13283f" font-weight="800" font-size="13" text-anchor="middle" y="72">수입 통관</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="88">Clearance</text>
+            </g>
+            <!-- 5. CFS/CY out -->
+            <g transform="translate(820,90)">
+              <circle r="44" fill="url(#imstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6"/><path d="m12 9 3 3-3 3"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">반출·운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">CY-out</text>
+            </g>
+            <!-- 6. Inland delivery -->
+            <g transform="translate(1000,90)">
+              <circle r="44" fill="url(#imstep)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22V8l8-4 8 4v14"/><path d="M2 22h18"/><path d="M7 22v-6h6v6"/><path d="M14 12h5M14 16h5"/></g>
+              <text fill="#13283f" font-weight="700" font-size="13" text-anchor="middle" y="68">고객사 도착</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="84">Delivery</text>
+            </g>
+          </g>
+        </svg>
+        <div class="flow-caption"><span data-lang="ko">D/O 발급, 보세운송, 부가세 환급까지 통합 관리합니다.</span><span data-lang="en">Integrated handling — D/O issuance, bonded transport, and VAT refund.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Import service details -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Import Services</div><h2 class="sec-title"><span data-lang="ko">수입 물류 상세 서비스</span><span data-lang="en">Detailed Import Services</span></h2>
+      <p class="sec-desc"><span data-lang="ko">화물 인수부터 내륙 배송까지, 수입 절차의 모든 단계를 지원합니다.</span><span data-lang="en">From overseas pickup to inland delivery — full support across every import stage.</span></p></div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg></div><h4><span data-lang="ko">해외 화물 인수</span><span data-lang="en">Overseas Pickup</span></h4><p><span data-lang="ko">해외 공급처와 직접 협의해 화물 인수, 현지 트럭킹, CFS·CY 반입까지 통합 관리합니다.</span><span data-lang="en">Direct coordination with overseas suppliers — pickup, local trucking, and CFS/CY drop-off.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div><h4><span data-lang="ko">수입 통관 대행</span><span data-lang="en">Import Customs</span></h4><p><span data-lang="ko">관세사와 협업해 수입 신고, 관세·부가세 납부, 검역 절차까지 신속하게 진행합니다.</span><span data-lang="en">Import filing, duty &amp; VAT payment, and quarantine procedures — handled fast with our customs broker network.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><circle cx="8" cy="15" r="1"/><path d="M12 15h6"/></svg></div><h4><span data-lang="ko">D/O 발급 지원</span><span data-lang="en">D/O Issuance</span></h4><p><span data-lang="ko">선사·항공사와 협의하여 화물인도지시서(D/O) 발급을 지원하고, 항만 반출 절차를 신속히 진행합니다.</span><span data-lang="en">Delivery Order (D/O) issuance via carrier coordination and fast port release procedures.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14V4a1 1 0 0 1 1-1h11v12"/><path d="M12 7h4l3 3v5"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h4><span data-lang="ko">내륙 운송·배송</span><span data-lang="en">Inland Delivery</span></h4><p><span data-lang="ko">항만·공항에서 고객사 창고·공장까지 트럭, 컨테이너 차량으로 정시 배송합니다.</span><span data-lang="en">On-time truck and container delivery from port/airport to your warehouse or factory.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4><span data-lang="ko">관세 환급 컨설팅</span><span data-lang="en">Duty Drawback</span></h4><p><span data-lang="ko">재수출용 원재료에 대한 관세 환급 조건 검토 및 신청 절차를 지원하여 비용을 절감합니다.</span><span data-lang="en">Review and filing support for duty drawback on re-export materials — cost savings made simple.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h4><span data-lang="ko">화물 진행 모니터링</span><span data-lang="en">Status Monitoring</span></h4><p><span data-lang="ko">선적·입항·통관·배송 등 모든 단계를 실시간으로 추적하고 진행 현황을 정기 보고합니다.</span><span data-lang="en">Real-time tracking across loading, arrival, clearance, and delivery — with regular status reports.</span></p></div>
+      </div>
+    </div>
+  </section>
+
     <section class="cta">
     <div class="container">
       <h2><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
@@ -1126,6 +1489,101 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
       </div>
     </div>
   </section>
+
+  <!-- Warehouse operations diagram -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Warehouse Operations</div><h2 class="sec-title"><span data-lang="ko">창고 운영 흐름</span><span data-lang="en">Warehouse Operations Flow</span></h2>
+      <p class="sec-desc"><span data-lang="ko">입고부터 출고까지, 화물의 모든 동선을 체계적으로 관리합니다.</span><span data-lang="en">From receiving to dispatch — every movement, systematically managed.</span></p></div>
+      <div class="flow-diagram reveal">
+        <svg viewBox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warehouse Operations">
+          <defs>
+            <linearGradient id="zoneGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#f4f7fa"/></linearGradient>
+            <marker id="arrowW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8862b"/></marker>
+          </defs>
+          <!-- Top label band: INBOUND -->
+          <text x="120" y="38" font-size="11" font-weight="800" letter-spacing="2.5" fill="#2c6e9b" font-family="'Noto Sans KR',sans-serif">▸ INBOUND</text>
+          <text x="900" y="38" font-size="11" font-weight="800" letter-spacing="2.5" fill="#c8862b" font-family="'Noto Sans KR',sans-serif">OUTBOUND ▸</text>
+          <!-- 5 warehouse zones as rounded rectangles -->
+          <g font-family="'Noto Sans KR',sans-serif">
+            <!-- 1. Receiving -->
+            <g transform="translate(80,80)">
+              <rect width="150" height="110" rx="12" fill="url(#zoneGrad)" stroke="#2c6e9b" stroke-width="2"/>
+              <rect width="150" height="6" rx="3" fill="#2c6e9b"/>
+              <g transform="translate(63,28)" fill="none" stroke="#13283f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6a1 1 0 0 1 1-1h11v12"/><path d="M15 8h4l3 3v5"/><circle cx="7" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></g>
+              <text x="75" y="80" text-anchor="middle" font-size="14" font-weight="800" fill="#13283f">입고</text>
+              <text x="75" y="98" text-anchor="middle" font-size="11" fill="#5a6b7b">Receiving</text>
+            </g>
+            <line x1="240" y1="135" x2="270" y2="135" stroke="#c8862b" stroke-width="2" marker-end="url(#arrowW)"/>
+            <!-- 2. Inspection -->
+            <g transform="translate(275,80)">
+              <rect width="150" height="110" rx="12" fill="url(#zoneGrad)" stroke="#2c6e9b" stroke-width="2"/>
+              <rect width="150" height="6" rx="3" fill="#2c6e9b"/>
+              <g transform="translate(63,28)" fill="none" stroke="#13283f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="m8 11 2 2 4-4"/></g>
+              <text x="75" y="80" text-anchor="middle" font-size="14" font-weight="800" fill="#13283f">검수</text>
+              <text x="75" y="98" text-anchor="middle" font-size="11" fill="#5a6b7b">Inspection</text>
+            </g>
+            <line x1="435" y1="135" x2="465" y2="135" stroke="#c8862b" stroke-width="2" marker-end="url(#arrowW)"/>
+            <!-- 3. Storage (highlighted) -->
+            <g transform="translate(470,80)">
+              <rect width="150" height="110" rx="12" fill="#13283f"/>
+              <rect width="150" height="6" rx="3" fill="#c8862b"/>
+              <g transform="translate(63,28)" fill="none" stroke="#c8862b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M7 21v-7h10v7"/><path d="M7 14h10"/></g>
+              <text x="75" y="80" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">보관·재고</text>
+              <text x="75" y="98" text-anchor="middle" font-size="11" fill="rgba(255,255,255,.7)">Storage / Inventory</text>
+            </g>
+            <line x1="630" y1="135" x2="660" y2="135" stroke="#c8862b" stroke-width="2" marker-end="url(#arrowW)"/>
+            <!-- 4. Picking/Packing -->
+            <g transform="translate(665,80)">
+              <rect width="150" height="110" rx="12" fill="url(#zoneGrad)" stroke="#2c6e9b" stroke-width="2"/>
+              <rect width="150" height="6" rx="3" fill="#2c6e9b"/>
+              <g transform="translate(63,28)" fill="none" stroke="#13283f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.5 4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></g>
+              <text x="75" y="80" text-anchor="middle" font-size="14" font-weight="800" fill="#13283f">피킹·패킹</text>
+              <text x="75" y="98" text-anchor="middle" font-size="11" fill="#5a6b7b">Pick / Pack</text>
+            </g>
+            <line x1="825" y1="135" x2="855" y2="135" stroke="#c8862b" stroke-width="2" marker-end="url(#arrowW)"/>
+            <!-- 5. Dispatch -->
+            <g transform="translate(860,80)">
+              <rect width="150" height="110" rx="12" fill="url(#zoneGrad)" stroke="#2c6e9b" stroke-width="2"/>
+              <rect width="150" height="6" rx="3" fill="#2c6e9b"/>
+              <g transform="translate(63,28)" fill="none" stroke="#13283f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></g>
+              <text x="75" y="80" text-anchor="middle" font-size="14" font-weight="800" fill="#13283f">출고·배송</text>
+              <text x="75" y="98" text-anchor="middle" font-size="11" fill="#5a6b7b">Dispatch</text>
+            </g>
+          </g>
+        </svg>
+        <div class="flow-caption"><span data-lang="ko">WMS 기반 실시간 재고 관리와 VAS(부가가치 서비스)를 함께 제공합니다.</span><span data-lang="en">WMS-based real-time inventory management with Value-Added Services (VAS).</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warehouse service details -->
+  <section class="pg-section">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Warehouse Services</div><h2 class="sec-title"><span data-lang="ko">창고 물류 상세 서비스</span><span data-lang="en">Detailed Warehouse Services</span></h2>
+      <p class="sec-desc"><span data-lang="ko">단순 보관을 넘어 SCM 전체를 고려한 통합 창고 솔루션을 제공합니다.</span><span data-lang="en">Beyond simple storage — integrated solutions designed for your whole supply chain.</span></p></div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M7 21v-7h10v7"/><path d="M7 14h10"/></svg></div><h4><span data-lang="ko">보관·재고 관리</span><span data-lang="en">Storage &amp; Inventory</span></h4><p><span data-lang="ko">단기·장기 보관, 상온·정온·냉장·냉동 등 화물 특성에 맞춘 보관 환경을 제공합니다. WMS 기반 실시간 재고 현황 공유.</span><span data-lang="en">Short and long-term storage with ambient, climate-controlled, and refrigerated environments suited to each cargo. WMS-based real-time inventory visibility.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div><h4><span data-lang="ko">입출고 관리</span><span data-lang="en">Inbound/Outbound</span></h4><p><span data-lang="ko">바코드·RFID 기반의 정확한 입출고 검수와 디지털 기록으로 화물의 모든 이동을 추적합니다.</span><span data-lang="en">Barcode &amp; RFID-based accurate inbound/outbound verification with digital records — every movement traceable.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg></div><h4><span data-lang="ko">부가가치 서비스(VAS)</span><span data-lang="en">Value-Added Services</span></h4><p><span data-lang="ko">라벨링, 재포장, 세트구성, 샘플링, 검사 등 화물에 가치를 더하는 부가가치 작업을 수행합니다.</span><span data-lang="en">Labeling, re-packing, kitting, sampling, and inspection — value-added work that prepares cargo for its next destination.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V5a2 2 0 0 1 2-2h4"/><path d="M21 9V5a2 2 0 0 0-2-2h-4"/><path d="M3 15v4a2 2 0 0 0 2 2h4"/><path d="M21 15v4a2 2 0 0 1-2 2h-4"/><circle cx="12" cy="12" r="3"/></svg></div><h4><span data-lang="ko">보세창고 운영</span><span data-lang="en">Bonded Warehouse</span></h4><p><span data-lang="ko">관세청 허가 보세창고와 연계해 통관 전 화물의 안전한 보관을 지원합니다.</span><span data-lang="en">Customs-licensed bonded warehouse partnerships for safe storage prior to clearance.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 6-6"/></svg></div><h4><span data-lang="ko">재고 분석·리포트</span><span data-lang="en">Inventory Analytics</span></h4><p><span data-lang="ko">재고 회전율, 적정 재고량, ABC 분석 등 데이터 기반 컨설팅으로 보관 비용을 최적화합니다.</span><span data-lang="en">Turnover, optimal stock levels, ABC analysis — data-driven consulting that optimizes carrying cost.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg></div><h4><span data-lang="ko">허브 창고·VMI/BWT</span><span data-lang="en">Hub Warehouse &amp; VMI/BWT</span></h4><p><span data-lang="ko">CDC·RDC 등 거점 창고 운영과, VMI(공급자 재고 관리)·BWT(공급사 운영) 등 고도화 모델도 지원합니다.</span><span data-lang="en">CDC/RDC hub operations plus advanced models — VMI (Vendor-Managed Inventory) and BWT (Bonded Warehouse Transfer).</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warehouse 4-step process -->
+  <section class="pg-section alt"><div class="container">
+    <div class="sec-head reveal"><h2 class="sec-title"><span data-lang="ko">창고 물류 진행 절차</span><span data-lang="en">Warehouse Process</span></h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="snum">1</div><h4><span data-lang="ko">입고·검수</span><span data-lang="en">Receive &amp; Inspect</span></h4><p><span data-lang="ko">수량·상태·라벨 확인</span><span data-lang="en">Verify qty, condition, label</span></p></div>
+      <div class="step reveal"><div class="snum">2</div><h4><span data-lang="ko">적치·보관</span><span data-lang="en">Putaway &amp; Store</span></h4><p><span data-lang="ko">위치 배정·시스템 등록</span><span data-lang="en">Slot assignment &amp; system entry</span></p></div>
+      <div class="step reveal"><div class="snum">3</div><h4><span data-lang="ko">재고·VAS</span><span data-lang="en">Inventory &amp; VAS</span></h4><p><span data-lang="ko">실시간 재고·부가 작업</span><span data-lang="en">Real-time stock &amp; value-add</span></p></div>
+      <div class="step reveal"><div class="snum">4</div><h4><span data-lang="ko">출고·배송</span><span data-lang="en">Dispatch</span></h4><p><span data-lang="ko">피킹·패킹·차량 배송</span><span data-lang="en">Pick, pack, deliver</span></p></div>
+    </div>
+  </div></section>
+
     <section class="cta">
     <div class="container">
       <h2><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
@@ -1135,7 +1593,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
   </section>
 </div>
 
-<!-- ===================== CS: TRANSPORT ===================== -->
+<!-- ===================== CS: TRANSPORT ====================== -->
 <div class="page" id="page-cs-transport">
   <section class="subhero"><div class="subhero-bg" style="background-image:url('images/flight.jpg')"></div>
     <div class="subhero-inner"><h2><span data-lang="ko">운송물류 상담</span><span data-lang="en">Transport Logistics</span></h2>
@@ -1158,6 +1616,94 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
       <div class="split-img reveal"><img src="images/sky.jpg" alt="transport"></div>
     </div>
   </section>
+
+  <!-- Multimodal Network diagram (hub-and-spoke) -->
+  <section class="pg-section alt">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Multimodal Network</div><h2 class="sec-title"><span data-lang="ko">통합 멀티모달 네트워크</span><span data-lang="en">Integrated Multimodal Network</span></h2>
+      <p class="sec-desc"><span data-lang="ko">해상·항공·철도·도로 4가지 운송 수단을 하나의 솔루션으로 결합합니다.</span><span data-lang="en">Sea, air, rail, and road — four transport modes combined into a single solution.</span></p></div>
+      <div class="flow-diagram reveal">
+        <svg viewBox="0 0 1100 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Multimodal Transport Network">
+          <defs>
+            <radialGradient id="tHub" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c8862b"/><stop offset="100%" stop-color="#9a651f"/></radialGradient>
+            <linearGradient id="tMode" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2c6e9b"/><stop offset="100%" stop-color="#13283f"/></linearGradient>
+          </defs>
+          <!-- Decorative orbits -->
+          <circle cx="550" cy="180" r="180" fill="none" stroke="rgba(44,110,155,.10)" stroke-width="1" stroke-dasharray="2,5"/>
+          <circle cx="550" cy="180" r="110" fill="none" stroke="rgba(200,134,43,.18)" stroke-width="1"/>
+          <!-- Connection lines from hub to each mode -->
+          <line x1="550" y1="180" x2="230" y2="100" stroke="#c8862b" stroke-width="2" stroke-dasharray="6,5" opacity="0.55"/>
+          <line x1="550" y1="180" x2="870" y2="100" stroke="#c8862b" stroke-width="2" stroke-dasharray="6,5" opacity="0.55"/>
+          <line x1="550" y1="180" x2="230" y2="270" stroke="#c8862b" stroke-width="2" stroke-dasharray="6,5" opacity="0.55"/>
+          <line x1="550" y1="180" x2="870" y2="270" stroke="#c8862b" stroke-width="2" stroke-dasharray="6,5" opacity="0.55"/>
+          <g font-family="'Noto Sans KR',sans-serif">
+            <!-- Mode 1: Sea (top-left) -->
+            <g transform="translate(230,100)">
+              <circle r="50" fill="url(#tMode)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-13,-12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c1.5-1.5 2.7-2.5 5-2.5h12c2.3 0 3.5 1 5 2.5"/><path d="M5 17h14l-2-7H7z"/><path d="M12 10V3"/></g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="74">해상 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="91">Sea / Ocean</text>
+            </g>
+            <!-- Mode 2: Air (top-right) -->
+            <g transform="translate(870,100)">
+              <circle r="50" fill="url(#tMode)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="74">항공 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="91">Air Cargo</text>
+            </g>
+            <!-- Mode 3: Rail (bottom-left) -->
+            <g transform="translate(230,270)">
+              <circle r="50" fill="url(#tMode)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-12,-12)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="3"/><path d="M3 9h18"/><circle cx="7" cy="13" r="1"/><circle cx="17" cy="13" r="1"/><path d="m6 21 2-3M16 18l2 3"/></g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="74">철도 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="91">Rail Transport</text>
+            </g>
+            <!-- Mode 4: Road (bottom-right) -->
+            <g transform="translate(870,270)">
+              <circle r="50" fill="url(#tMode)" stroke="#fff" stroke-width="3"/>
+              <g transform="translate(-13,-11)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14V4a1 1 0 0 1 1-1h11v12"/><path d="M12 7h4l3 3v5"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 18h8"/></g>
+              <text fill="#13283f" font-weight="700" font-size="14" text-anchor="middle" y="74">도로 운송</text>
+              <text fill="#5a6b7b" font-size="11" text-anchor="middle" y="91">Trucking</text>
+            </g>
+            <!-- Center hub -->
+            <circle cx="550" cy="180" r="70" fill="url(#tHub)" stroke="#fff" stroke-width="3"/>
+            <text x="550" y="170" text-anchor="middle" font-size="11" font-weight="800" letter-spacing="2" fill="rgba(255,255,255,.85)">UNO MULTIMODAL</text>
+            <text x="550" y="192" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" font-family="'Inter',sans-serif" letter-spacing="1">HUB</text>
+            <text x="550" y="210" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.65)">통합 운송 솔루션</text>
+          </g>
+        </svg>
+        <div class="flow-caption"><span data-lang="ko">화물의 특성과 일정에 맞춰 최적의 운송 조합을 설계합니다.</span><span data-lang="en">Optimal mode combination designed for your cargo and timeline.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport service details -->
+  <section class="pg-section">
+    <div class="container">
+      <div class="sec-head reveal"><div class="sec-tag">Transport Services</div><h2 class="sec-title"><span data-lang="ko">운송 물류 상세 서비스</span><span data-lang="en">Detailed Transport Services</span></h2>
+      <p class="sec-desc"><span data-lang="ko">화물의 종류와 거리, 일정에 맞춰 가장 효율적인 운송 방식을 제안합니다.</span><span data-lang="en">We propose the most efficient mode based on cargo type, distance, and schedule.</span></p></div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14V4a1 1 0 0 1 1-1h11v12"/><path d="M12 7h4l3 3v5"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M7 18h8"/></svg></div><h4><span data-lang="ko">도로 운송 (트럭킹)</span><span data-lang="en">Trucking</span></h4><p><span data-lang="ko">컨테이너 차량, 카고 트럭, 윙바디, 탑차 등 다양한 차종을 화물 특성에 맞춰 운영합니다. 인천·평택·부산 등 주요 항만 거점 직배차 가능.</span><span data-lang="en">Container trucks, cargo trucks, wing-body, and box trucks — operated to suit each cargo. Direct dispatch from Incheon, Pyeongtaek, Busan, and other key ports.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="3"/><path d="M3 9h18"/><circle cx="7" cy="13" r="1"/><circle cx="17" cy="13" r="1"/><path d="m6 21 2-3M16 18l2 3"/></svg></div><h4><span data-lang="ko">철도 운송</span><span data-lang="en">Rail Transport</span></h4><p><span data-lang="ko">부산-의왕 등 주요 노선의 컨테이너 철도 연계 운송. 정시성이 높고 대량 화물에 경제적입니다.</span><span data-lang="en">Container rail service on key routes such as Busan-Uiwang — high punctuality and economical for bulk cargo.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c1.5-1.5 2.7-2.5 5-2.5h12c2.3 0 3.5 1 5 2.5"/><path d="M5 17h14l-2-7H7z"/><path d="M12 10V3"/></svg></div><h4><span data-lang="ko">해상 연계 운송</span><span data-lang="en">Sea-linked Transport</span></h4><p><span data-lang="ko">컨테이너 본선의 부두 작업부터 내륙 거점까지의 연계 운송을 일괄 처리합니다. FCL·LCL 모두 가능.</span><span data-lang="en">From vessel discharge to inland hub — fully linked container transport. Both FCL and LCL supported.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div><h4><span data-lang="ko">항공 연계 운송</span><span data-lang="en">Air-linked Transport</span></h4><p><span data-lang="ko">인천·김포 공항에서 고객사까지의 항공 화물 픽업·배송. 긴급 화물에 최적입니다.</span><span data-lang="en">Air cargo pickup and delivery between Incheon/Gimpo airports and your facility — ideal for urgent shipments.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V5a2 2 0 0 1 2-2h4"/><path d="M21 9V5a2 2 0 0 0-2-2h-4"/><path d="M3 15v4a2 2 0 0 0 2 2h4"/><path d="M21 15v4a2 2 0 0 1-2 2h-4"/><rect x="7" y="8" width="10" height="8" rx="1"/><circle cx="12" cy="12" r="1.5"/></svg></div><h4><span data-lang="ko">보세 운송</span><span data-lang="en">Bonded Transport</span></h4><p><span data-lang="ko">다년간 축적된 노하우와 자체 CY/CFS를 기반으로 안전하고 신속한 보세구간 운송을 제공합니다.</span><span data-lang="en">Safe and rapid bonded-zone transport built on years of know-how and in-house CY/CFS facilities.</span></p></div>
+        <div class="svc-detail reveal"><div class="sd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7l8 5 8-5z"/><path d="m4 12 8 5 8-5"/><path d="m4 17 8 5 8-5"/></svg></div><h4><span data-lang="ko">특수 운송</span><span data-lang="en">Specialized Transport</span></h4><p><span data-lang="ko">중량물(Heavy Lift), 온도 관리(Reefer), 위험물(DG) 등 특수 화물의 안전한 운송을 지원합니다.</span><span data-lang="en">Heavy lift, refrigerated (reefer), and dangerous goods (DG) — safe transport for specialized cargo.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport 4-step process -->
+  <section class="pg-section alt"><div class="container">
+    <div class="sec-head reveal"><h2 class="sec-title"><span data-lang="ko">운송 물류 진행 절차</span><span data-lang="en">Transport Process</span></h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="snum">1</div><h4><span data-lang="ko">운송 계획</span><span data-lang="en">Planning</span></h4><p><span data-lang="ko">화물·일정 분석, 최적 경로 설계</span><span data-lang="en">Analyze cargo &amp; design route</span></p></div>
+      <div class="step reveal"><div class="snum">2</div><h4><span data-lang="ko">배차·픽업</span><span data-lang="en">Dispatch</span></h4><p><span data-lang="ko">적합한 차량 배정, 픽업 수행</span><span data-lang="en">Vehicle assignment &amp; pickup</span></p></div>
+      <div class="step reveal"><div class="snum">3</div><h4><span data-lang="ko">운송·모니터링</span><span data-lang="en">In-Transit</span></h4><p><span data-lang="ko">GPS 추적·진행 상황 보고</span><span data-lang="en">GPS tracking &amp; status updates</span></p></div>
+      <div class="step reveal"><div class="snum">4</div><h4><span data-lang="ko">인도·정산</span><span data-lang="en">Delivery</span></h4><p><span data-lang="ko">도착지 인도, 운송장 확정</span><span data-lang="en">Final delivery &amp; settlement</span></p></div>
+    </div>
+  </div></section>
+
     <section class="cta">
     <div class="container">
       <h2><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
