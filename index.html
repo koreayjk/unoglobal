@@ -454,6 +454,73 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item .faq-a{padding:0 26px 24px;color:var(--gray);font-size:15.5px;line-height:1.8}
 @media(max-width:560px){.faq-item summary{font-size:15.5px;padding:18px 20px}.faq-item .faq-a{padding:0 20px 20px;font-size:14.5px}}
+
+/* ===================== VIDEO-DRIVEN PREMIUM REDESIGN ===================== */
+.media-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy-deep)}
+.media-bg video{width:100%;height:100%;object-fit:cover;display:block}
+.media-bg .scrim{position:absolute;inset:0}
+.vhero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.vhero .scrim{background:linear-gradient(105deg,rgba(6,18,33,.9) 0%,rgba(8,24,43,.62) 46%,rgba(8,24,43,.22) 76%,rgba(8,24,43,.52) 100%)}
+.vhero>.container{position:relative;z-index:2;width:100%;padding-top:80px;padding-bottom:140px}
+.eyebrow2{display:inline-flex;align-items:center;gap:14px;font-size:13px;letter-spacing:4px;font-weight:700;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+.eyebrow2::before{content:"";width:46px;height:1.5px;background:var(--accent)}
+.vhero h1{font-size:clamp(34px,5.6vw,68px);font-weight:800;line-height:1.16;letter-spacing:-1.5px;margin-bottom:24px}
+.vhero h1 .thin{display:block;font-weight:300;color:rgba(255,255,255,.9)}
+.vhero .lead{font-size:clamp(15.5px,1.5vw,19px);font-weight:300;color:rgba(255,255,255,.9);max-width:600px;margin-bottom:40px;line-height:1.75}
+.hero-bar{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid rgba(255,255,255,.16);background:rgba(7,19,34,.34);backdrop-filter:blur(8px)}
+.hero-bar .container{display:grid;grid-template-columns:repeat(4,1fr)}
+.hero-bar .hb{padding:24px 14px;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.hero-bar .hb:first-child{border-left:none}
+.hero-bar .hb b{display:block;font-size:clamp(22px,2.3vw,31px);font-weight:800;color:#fff;letter-spacing:-.5px}
+.hero-bar .hb span{font-size:13px;color:rgba(255,255,255,.74)}
+.scroll-cue{position:absolute;left:50%;bottom:120px;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.72);font-size:11px;letter-spacing:3px;text-align:center}
+.scroll-cue::after{content:"";display:block;width:1px;height:46px;margin:12px auto 0;background:linear-gradient(rgba(255,255,255,.75),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:.2;transform:scaleY(.4)}50%{opacity:1;transform:scaleY(1)}100%{opacity:.2;transform:scaleY(.4)}}
+.vsection{position:relative;overflow:hidden;color:#fff;padding:140px 0}
+.vsection .scrim{background:linear-gradient(180deg,rgba(7,19,34,.84),rgba(7,19,34,.92))}
+.vsection>.container{position:relative;z-index:2}
+.vsection .sec-title{color:#fff}.vsection .sec-desc{color:rgba(255,255,255,.82)}
+.statement{text-align:center;max-width:920px;margin:0 auto 54px}
+.statement .eyebrow2{justify-content:center}
+.statement h2{font-size:clamp(26px,3.5vw,44px);font-weight:800;line-height:1.3;letter-spacing:-1px;margin-bottom:22px}
+.statement h2 b{color:var(--accent)}
+.statement p{font-size:17px;color:rgba(255,255,255,.82);line-height:1.85}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:960px;margin:0 auto}
+.pillar{text-align:center;padding:30px 20px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.04);transition:.3s}
+.pillar:hover{border-color:var(--accent);background:rgba(200,134,43,.1)}
+.pillar .pk{font-size:21px;font-weight:800;color:#fff;margin-bottom:8px}
+.pillar .pd{font-size:14px;color:rgba(255,255,255,.76)}
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:10px}
+.ba-card{position:relative;height:330px;border-radius:14px;overflow:hidden;cursor:pointer;color:#fff}
+.ba-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:1.1s cubic-bezier(.2,.7,.2,1)}
+.ba-card .bascr{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,38,.05) 28%,rgba(6,16,30,.9));transition:.4s}
+.ba-card:hover img{transform:scale(1.08)}
+.ba-card:hover .bascr{background:linear-gradient(180deg,rgba(10,22,38,.22) 8%,rgba(6,16,30,.93))}
+.ba-body{position:absolute;left:0;bottom:0;z-index:2;padding:30px 32px;width:100%}
+.ba-num{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--accent)}
+.ba-body h3{font-size:24px;font-weight:800;margin:10px 0}
+.ba-body p{font-size:14.5px;color:rgba(255,255,255,.86);max-width:94%;max-height:0;opacity:0;overflow:hidden;transition:.45s}
+.ba-card:hover .ba-body p{max-height:140px;opacity:1}
+.ba-body .ba-go{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px}
+.vnet .net-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.vnet .net-card:hover{background:rgba(200,134,43,.18);border-color:var(--accent)}
+.vcta{position:relative;overflow:hidden;color:#fff;padding:120px 0;text-align:center}
+.vcta .scrim{background:linear-gradient(120deg,rgba(6,16,30,.9),rgba(9,26,45,.68))}
+.vcta>.container{position:relative;z-index:2}
+.vcta h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;margin-bottom:16px}
+.vcta p{font-size:17px;color:rgba(255,255,255,.88);margin-bottom:32px}
+@media(max-width:860px){
+ .ba-grid{grid-template-columns:1fr}
+ .pillars{grid-template-columns:1fr}
+ .hero-bar .container{grid-template-columns:repeat(2,1fr)}
+ .hero-bar .hb:nth-child(3){border-left:none}
+ .hero-bar .hb:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}
+ .scroll-cue{display:none}
+ .vhero>.container{padding-bottom:170px}
+ .vsection{padding:90px 0}
+}
+.vhero h1,.vhero .lead,.statement h2,.statement p,.vcta h2,.sec-title,.sec-desc,.ba-body h3,.ba-body p,.pillar .pk{word-break:keep-all}
+@media(prefers-reduced-motion:reduce){.media-bg video{display:none}}
 </style>
 </head>
 <body>
@@ -504,21 +571,28 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
 
 <!-- ===================== HOME ===================== -->
 <div class="page active" id="page-home">
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
+  <section class="vhero" id="home">
+    <div class="media-bg"><video autoplay muted loop playsinline preload="auto" poster="images/hero.jpg"><source src="videos/bg-hero.mp4" type="video/mp4"></video><div class="scrim"></div></div>
     <div class="container">
       <div class="hero-content">
-        <span class="hero-tag reveal">Global Logistics Partner</span>
-        <h1 class="reveal"><span data-lang="ko">세계를 잇는 신뢰의 물류<br>(주)유노글로벌</span><span data-lang="en">Connecting the World<br>with Trusted Logistics</span></h1>
-        <p class="reveal"><span data-lang="ko">해상운송부터 항공운송, 벌크·프로젝트 화물, 물류 컨설팅까지.<br>고객의 화물을 가장 안전하고 빠르게 세계 어디로든 연결합니다.</span><span data-lang="en">From sea and air freight to bulk &amp; project cargo and logistics consulting,<br>we deliver your cargo safely and swiftly to anywhere in the world.</span></p>
+        <span class="eyebrow2 reveal">Global Logistics Partner</span>
+        <h1 class="reveal"><span data-lang="ko">세계를 잇는 신뢰의 물류<span class="thin">(주)유노글로벌</span></span><span data-lang="en">Connecting the World<span class="thin">with Trusted Logistics</span></span></h1>
+        <p class="lead reveal"><span data-lang="ko">해상운송부터 항공운송, 벌크·프로젝트 화물, 물류 컨설팅까지. 고객의 화물을 가장 안전하고 빠르게 세계 어디로든 연결합니다.</span><span data-lang="en">From sea and air freight to bulk &amp; project cargo and logistics consulting — we deliver your cargo safely and swiftly anywhere in the world.</span></p>
         <div class="hero-btns reveal">
           <button class="btn btn-primary" onclick="goPage('svc-sea')"><span data-lang="ko">서비스 보기</span><span data-lang="en">Our Services</span></button>
           <button class="btn btn-ghost" onclick="goPage('about-location')"><span data-lang="ko">상담 문의</span><span data-lang="en">Get in Touch</span></button>
         </div>
       </div>
     </div>
-    <div class="scroll-ind">SCROLL</div>
+    <div class="hero-bar">
+      <div class="container">
+        <div class="hb"><b>24/7</b><span data-lang="ko">실시간 물류 대응</span><span data-lang="en">Real-Time Support</span></div>
+        <div class="hb"><b>Global</b><span data-lang="ko">전 세계 운송 네트워크</span><span data-lang="en">Worldwide Network</span></div>
+        <div class="hb"><b>Sea·Air</b><span data-lang="ko">해상·항공 통합 운송</span><span data-lang="en">Integrated Sea &amp; Air</span></div>
+        <div class="hb"><b>100%</b><span data-lang="ko">고객 중심 맞춤 서비스</span><span data-lang="en">Client-Focused Service</span></div>
+      </div>
+    </div>
+    <div class="scroll-cue">SCROLL</div>
   </section>
 
   <section class="about" id="about">
@@ -534,44 +608,53 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
     </div>
   </section>
 
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat reveal"><div class="num">24/7</div><div class="lbl"><span data-lang="ko">실시간 물류 대응</span><span data-lang="en">Real-Time Support</span></div></div>
-      <div class="stat reveal"><div class="num">Global</div><div class="lbl"><span data-lang="ko">전 세계 운송 네트워크</span><span data-lang="en">Worldwide Network</span></div></div>
-      <div class="stat reveal"><div class="num">Sea·Air</div><div class="lbl"><span data-lang="ko">해상·항공 통합 운송</span><span data-lang="en">Integrated Sea &amp; Air</span></div></div>
-      <div class="stat reveal"><div class="num">100%</div><div class="lbl"><span data-lang="ko">고객 중심 맞춤 서비스</span><span data-lang="en">Client-Focused Service</span></div></div>
+  <section class="vsection">
+    <div class="media-bg"><video autoplay muted loop playsinline preload="metadata" poster="images/terminal.jpg"><source src="videos/bg-logistics.mp4" type="video/mp4"></video><div class="scrim"></div></div>
+    <div class="container">
+      <div class="statement reveal">
+        <span class="eyebrow2">Why UNO Global</span>
+        <h2><span data-lang="ko">세계를 잇는 길, <b>유노글로벌</b>이 함께합니다</span><span data-lang="en">On every route across the world, <b>UNO Global</b> moves with you</span></h2>
+        <p><span data-lang="ko">풍부한 경험과 글로벌 파트너 네트워크, 그리고 정직과 신뢰. 고객 한 분 한 분의 화물을 내 일처럼 책임지는 것이 유노글로벌의 약속입니다.</span><span data-lang="en">Deep experience, a global partner network, and uncompromising trust — we handle every shipment as if it were our own.</span></p>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal"><div class="pk"><span data-lang="ko">해상·항공 통합</span><span data-lang="en">Sea &amp; Air</span></div><div class="pd"><span data-lang="ko">모드를 아우르는 최적 운송 설계</span><span data-lang="en">Optimal design across every mode</span></div></div>
+        <div class="pillar reveal"><div class="pk"><span data-lang="ko">글로벌 네트워크</span><span data-lang="en">Global Network</span></div><div class="pd"><span data-lang="ko">세계 주요 거점 파트너십</span><span data-lang="en">Partners at key hubs worldwide</span></div></div>
+        <div class="pillar reveal"><div class="pk"><span data-lang="ko">24시간 대응</span><span data-lang="en">24/7 Response</span></div><div class="pd"><span data-lang="ko">실시간 화물 추적과 신속 상담</span><span data-lang="en">Real-time tracking &amp; fast support</span></div></div>
+      </div>
     </div>
   </section>
 
   <section class="services" style="background:var(--light)">
     <div class="container">
       <div class="sec-head reveal">
-        <div class="sec-tag">Our Services</div>
+        <div class="sec-tag">Business Area</div>
         <h2 class="sec-title"><span data-lang="ko">유노글로벌의 물류 서비스</span><span data-lang="en">Our Logistics Services</span></h2>
         <p class="sec-desc"><span data-lang="ko">고객의 다양한 화물과 요구에 맞춰 최적의 운송 솔루션을 제공합니다.</span><span data-lang="en">We provide optimal transport solutions tailored to diverse cargo and client needs.</span></p>
       </div>
-      <div class="svc-grid">
-        <div class="svc reveal" onclick="goPage('svc-sea')">
-          <div class="svc-img"><span class="svc-num">01</span><img src="images/sea.jpg" alt="해상운송"></div>
-          <div class="svc-body"><h3><span data-lang="ko">해상운송</span><span data-lang="en">Sea Freight</span></h3><p><span data-lang="ko">FCL·LCL 컨테이너 화물의 수출입 운송을 글로벌 선사 네트워크를 통해 안정적으로 처리합니다.</span><span data-lang="en">Reliable FCL/LCL container transport through our global carrier network.</span></p><span class="svc-more"><span data-lang="ko">자세히 보기 →</span><span data-lang="en">Learn more →</span></span></div>
+      <div class="ba-grid">
+        <div class="ba-card reveal" onclick="goPage('svc-sea')">
+          <img src="images/sea.jpg" alt="해상운송"><div class="bascr"></div>
+          <div class="ba-body"><div class="ba-num">01</div><h3><span data-lang="ko">해상운송</span><span data-lang="en">Sea Freight</span></h3><p><span data-lang="ko">FCL·LCL 컨테이너 화물의 수출입 운송을 글로벌 선사 네트워크를 통해 안정적으로 처리합니다.</span><span data-lang="en">Reliable FCL/LCL container transport through our global carrier network.</span></p><span class="ba-go"><span data-lang="ko">자세히 보기</span><span data-lang="en">Learn more</span> →</span></div>
         </div>
-        <div class="svc reveal" onclick="goPage('svc-air')">
-          <div class="svc-img"><span class="svc-num">02</span><img src="images/air.jpg" alt="항공운송"></div>
-          <div class="svc-body"><h3><span data-lang="ko">항공운송</span><span data-lang="en">Air Freight</span></h3><p><span data-lang="ko">긴급 화물과 고부가가치 제품을 위한 신속하고 안전한 항공 운송 서비스를 제공합니다.</span><span data-lang="en">Fast, secure air transport for urgent shipments and high-value goods.</span></p><span class="svc-more"><span data-lang="ko">자세히 보기 →</span><span data-lang="en">Learn more →</span></span></div>
+        <div class="ba-card reveal" onclick="goPage('svc-air')">
+          <img src="images/air.jpg" alt="항공운송"><div class="bascr"></div>
+          <div class="ba-body"><div class="ba-num">02</div><h3><span data-lang="ko">항공운송</span><span data-lang="en">Air Freight</span></h3><p><span data-lang="ko">긴급 화물과 고부가가치 제품을 위한 신속하고 안전한 항공 운송 서비스를 제공합니다.</span><span data-lang="en">Fast, secure air transport for urgent shipments and high-value goods.</span></p><span class="ba-go"><span data-lang="ko">자세히 보기</span><span data-lang="en">Learn more</span> →</span></div>
         </div>
-        <div class="svc reveal" onclick="goPage('svc-bulk')">
-          <div class="svc-img"><span class="svc-num">03</span><img src="images/bulk.jpg" alt="벌크"></div>
-          <div class="svc-body"><h3><span data-lang="ko">벌크 · 프로젝트 화물</span><span data-lang="en">Bulk &amp; Project Cargo</span></h3><p><span data-lang="ko">대형·중량·특수 화물 운송 전문. 플랜트, 산업 설비 등의 운송을 안전하게 책임집니다.</span><span data-lang="en">Specialists in oversized, heavy, and special cargo such as plant and industrial equipment.</span></p><span class="svc-more"><span data-lang="ko">자세히 보기 →</span><span data-lang="en">Learn more →</span></span></div>
+        <div class="ba-card reveal" onclick="goPage('svc-bulk')">
+          <img src="images/bulk.jpg" alt="벌크"><div class="bascr"></div>
+          <div class="ba-body"><div class="ba-num">03</div><h3><span data-lang="ko">벌크 · 프로젝트 화물</span><span data-lang="en">Bulk &amp; Project Cargo</span></h3><p><span data-lang="ko">대형·중량·특수 화물 운송 전문. 플랜트, 산업 설비 등의 운송을 안전하게 책임집니다.</span><span data-lang="en">Specialists in oversized, heavy, and special cargo such as plant and industrial equipment.</span></p><span class="ba-go"><span data-lang="ko">자세히 보기</span><span data-lang="en">Learn more</span> →</span></div>
         </div>
-        <div class="svc reveal" onclick="goPage('svc-consult')">
-          <div class="svc-img"><span class="svc-num">04</span><img src="images/consulting.jpg" alt="컨설팅"></div>
-          <div class="svc-body"><h3><span data-lang="ko">물류 컨설팅</span><span data-lang="en">Logistics Consulting</span></h3><p><span data-lang="ko">수출입·창고·운송 전 과정에 대한 전문 컨설팅으로 물류 비용을 최적화합니다.</span><span data-lang="en">Expert consulting that optimizes your logistics costs across the supply chain.</span></p><span class="svc-more"><span data-lang="ko">자세히 보기 →</span><span data-lang="en">Learn more →</span></span></div>
+        <div class="ba-card reveal" onclick="goPage('svc-consult')">
+          <img src="images/consulting.jpg" alt="컨설팅"><div class="bascr"></div>
+          <div class="ba-body"><div class="ba-num">04</div><h3><span data-lang="ko">물류 컨설팅</span><span data-lang="en">Logistics Consulting</span></h3><p><span data-lang="ko">수출입·창고·운송 전 과정에 대한 전문 컨설팅으로 물류 비용을 최적화합니다.</span><span data-lang="en">Expert consulting that optimizes your logistics costs across the supply chain.</span></p><span class="ba-go"><span data-lang="ko">자세히 보기</span><span data-lang="en">Learn more</span> →</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="network">
+  <section class="network vnet" style="padding:0">
+    <div class="vsection" style="padding:130px 0">
+    <div class="media-bg"><video autoplay muted loop playsinline preload="metadata" poster="images/port-night.jpg"><source src="videos/bg-port.mp4" type="video/mp4"></video><div class="scrim"></div></div>
     <div class="container">
       <div class="sec-head reveal">
         <div class="sec-tag">Global Network</div>
@@ -584,6 +667,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
         <div class="net-card reveal"><h4><span data-lang="ko">유럽</span><span data-lang="en">Europe</span></h4><p><span data-lang="ko">유럽 주요 항만 거점 안정적 운송</span><span data-lang="en">Reliable service via major European hubs</span></p></div>
         <div class="net-card reveal"><h4><span data-lang="ko">글로벌</span><span data-lang="en">Worldwide</span></h4><p><span data-lang="ko">중동·중남미 등 전 세계 파트너십</span><span data-lang="en">Partnerships across the Middle East, Latin America &amp; beyond</span></p></div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -623,11 +707,12 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.65);padding:54px 0 30
     </div>
   </section>
 
-  <section class="cta">
+  <section class="vcta">
+    <div class="media-bg"><video autoplay muted loop playsinline preload="metadata" poster="images/aerial.jpg"><source src="videos/bg-sea.mp4" type="video/mp4"></video><div class="scrim"></div></div>
     <div class="container">
-      <h2><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
-      <p><span data-lang="ko">견적 문의부터 운송 상담까지, 전문 담당자가 신속하게 도와드립니다.</span><span data-lang="en">From quote requests to shipping consultations, our specialists are ready to help.</span></p>
-      <a class="btn btn-primary" href="mailto:98101531@naver.com?subject=물류 상담 문의 (UNO Global)&body=안녕하세요, 유노글로벌에 물류 상담을 문의드립니다.%0D%0A%0D%0A■ 회사명/성함:%0D%0A■ 연락처:%0D%0A■ 운송 형태 (해상/항공):%0D%0A■ 출발지 / 도착지:%0D%0A■ 화물 정보 (품목/중량/물량):%0D%0A■ 문의 내용:%0D%0A"><span data-lang="ko">지금 이메일로 문의하기</span><span data-lang="en">Email Us Now</span></a>
+      <h2 class="reveal"><span data-lang="ko">물류, 유노글로벌과 함께하세요</span><span data-lang="en">Partner with UNO Global</span></h2>
+      <p class="reveal"><span data-lang="ko">견적 문의부터 운송 상담까지, 전문 담당자가 신속하게 도와드립니다.</span><span data-lang="en">From quote requests to shipping consultations, our specialists are ready to help.</span></p>
+      <a class="btn btn-primary reveal" href="mailto:98101531@naver.com?subject=물류 상담 문의 (UNO Global)&body=안녕하세요, 유노글로벌에 물류 상담을 문의드립니다.%0D%0A%0D%0A■ 회사명/성함:%0D%0A■ 연락처:%0D%0A■ 운송 형태 (해상/항공):%0D%0A■ 출발지 / 도착지:%0D%0A■ 화물 정보 (품목/중량/물량):%0D%0A■ 문의 내용:%0D%0A"><span data-lang="ko">지금 이메일로 문의하기</span><span data-lang="en">Email Us Now</span></a>
     </div>
   </section>
 </div>
